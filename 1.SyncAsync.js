@@ -16,10 +16,13 @@ console.log("Arfatur Rahman");
 setTimeout(() => {
   //   console.log("this is asyncronous");
   const user = { id: 1 };
+  console.log("This is user id");
   setTimeout(() => {
     const products = [{}, {}, {}];
+    console.log("this is product");
     setTimeout(() => {
       const price = [];
+      console.log("this is price");
     }, 1000);
   }, 500);
 }, 1000);
