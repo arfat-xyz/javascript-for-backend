@@ -1,23 +1,17 @@
+// const { errorHandler, two, three } = require("./errorHandler.js");
+import two, { errorHandler } from "./errorHandler.js";
 async function getData() {
   try {
     // undefined.find();
     const emailError = new Error("This email alreaey exist");
     throw emailError;
   } catch (e) {
-    console.log(e);
+    console.log("errro from catch", e);
     errorHandler(e);
+    two();
+    // three();
   }
 }
 getData();
 
-function errorHandler(e) {
-  const { name, message, stack } = e;
-  /* logger.error({
-    name,
-    message,
-    stack,
-  }); */
-  //   console.log(stack);
-  console.log("Internal server error");
-}
 console.log("done");
